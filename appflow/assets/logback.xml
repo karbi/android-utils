@@ -1,0 +1,23 @@
+<configuration>
+    <!-- <consolePlugin /> -->
+
+    <!--
+    <appender name="SOCKET" class="ch.qos.logback.classic.net.SocketAppender">
+        <remoteHost>192.168.1.107</remoteHost>
+        <port>4321</port>
+        <reconnectionDelay>10000</reconnectionDelay>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+ -->
+
+    <appender name="LOGCAT" class="ch.qos.logback.classic.android.LogcatAppender">
+        <checkLoggable>false</checkLoggable>
+        <encoder>
+            <pattern>%msg</pattern>
+        </encoder>
+    </appender>
+
+    <root level="TRACE">
+        <appender-ref ref="LOGCAT" />
+    </root>
+</configuration>
